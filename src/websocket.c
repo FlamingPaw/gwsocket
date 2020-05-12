@@ -614,7 +614,7 @@ initialize_ssl_ctx (WSServer * server) {
   SSL_CTX *ctx = NULL;
 
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
-  SSL_library_init ();
+  SSL_SESSION_new ();
   SSL_load_error_strings ();
 #endif
 
